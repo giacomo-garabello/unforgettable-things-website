@@ -4,36 +4,48 @@
 (function () {
   "use strict";
 
+  var IT = document.documentElement.lang === "it";
+  // Images live in /assets; work out the path from this script's own URL so
+  // the demo works on / and on /it/ alike.
+  var script = document.currentScript;
+  var IMG = script ? script.src.replace(/js\/demo\.js.*$/, "img/") : "assets/img/";
+
+  var T = IT ? {
+    openCloseUp: "Apri dettaglio: ", show: "Mostra ", opened: "Aperto: ", backTo: "Torna a: "
+  } : {
+    openCloseUp: "Open close-up: ", show: "Show ", opened: "Opened ", backTo: "Back to "
+  };
+
   var PLACES = {
     hallway: {
-      name: "Hallway",
-      img: "assets/img/scene-hallway.svg",
-      alt: "A hallway with a wardrobe, a console table and an umbrella stand",
+      name: IT ? "Ingresso" : "Hallway",
+      img: IMG + "scene-hallway.svg",
+      alt: IT ? "Un ingresso con un armadio, una consolle e un portaombrelli" : "A hallway with a wardrobe, a console table and an umbrella stand",
       pins: [
-        { x: 0.283, y: 0.40, open: "wardrobe", label: "Wardrobe" },
-        { x: 0.606, y: 0.535, label: "Spare keys", note: "In the bowl on the console table.", align: "end" },
-        { x: 0.855, y: 0.66, label: "Umbrellas", align: "end" }
+        { x: 0.283, y: 0.40, open: "wardrobe", label: IT ? "Armadio" : "Wardrobe" },
+        { x: 0.606, y: 0.535, label: IT ? "Chiavi di scorta" : "Spare keys", note: IT ? "Nella ciotola sulla consolle." : "In the bowl on the console table.", align: "end" },
+        { x: 0.855, y: 0.66, label: IT ? "Ombrelli" : "Umbrellas", align: "end" }
       ]
     },
     wardrobe: {
-      name: "Wardrobe",
-      img: "assets/img/scene-wardrobe.svg",
-      alt: "Inside the wardrobe: boxes on the top shelf, hanging coats and drawers",
+      name: IT ? "Armadio" : "Wardrobe",
+      img: IMG + "scene-wardrobe.svg",
+      alt: IT ? "Dentro l'armadio: scatole sul ripiano alto, cappotti appesi e cassetti" : "Inside the wardrobe: boxes on the top shelf, hanging coats and drawers",
       pins: [
-        { x: 0.479, y: 0.21, open: "box", label: "Top shelf box" },
-        { x: 0.785, y: 0.22, label: "Winter duvet", align: "end" },
-        { x: 0.205, y: 0.60, label: "Ski jacket", align: "start" }
+        { x: 0.479, y: 0.21, open: "box", label: IT ? "Scatola in alto" : "Top shelf box" },
+        { x: 0.785, y: 0.22, label: IT ? "Piumone" : "Winter duvet", align: IT ? "start" : "end" },
+        { x: 0.205, y: 0.60, label: IT ? "Giacca da sci" : "Ski jacket", align: "start" }
       ]
     },
     box: {
-      name: "Top shelf box",
-      img: "assets/img/scene-box.svg",
-      alt: "Looking into the box: passports, a document folder, an envelope and a small pouch",
+      name: IT ? "Scatola in alto" : "Top shelf box",
+      img: IMG + "scene-box.svg",
+      alt: IT ? "Dentro la scatola: passaporti, una cartella di documenti, una busta e un astuccio" : "Looking into the box: passports, a document folder, an envelope and a small pouch",
       pins: [
-        { x: 0.27, y: 0.37, label: "Passports", date: { m: "MAR", d: "14", text: "Expires 14 March 2027. Your phone reminds you at 9:00 that day." } },
-        { x: 0.615, y: 0.34, label: "House documents" },
-        { x: 0.53, y: 0.70, label: "Warranty receipts", align: "end" },
-        { x: 0.81, y: 0.70, label: "Spare car key" }
+        { x: 0.27, y: 0.37, label: IT ? "Passaporti" : "Passports", date: { m: "MAR", d: "14", text: IT ? "Scade il 14 marzo 2027. Il telefono te lo ricorda alle 9:00 di quel giorno." : "Expires 14 March 2027. Your phone reminds you at 9:00 that day." } },
+        { x: 0.615, y: 0.34, label: IT ? "Documenti casa" : "House documents" },
+        { x: 0.53, y: 0.70, label: IT ? "Garanzie" : "Warranty receipts", align: "end" },
+        { x: 0.81, y: 0.70, label: IT ? "Chiave auto" : "Spare car key" }
       ]
     }
   };
@@ -116,7 +128,7 @@
       b.style.setProperty("--x", pin.x);
       b.style.setProperty("--y", pin.y);
       if (pin.align) b.setAttribute("data-align", pin.align);
-      b.setAttribute("aria-label", pin.open ? "Open close-up: " + pin.label : "Show " + pin.label);
+      b.setAttribute("aria-label", pin.open ? T.openCloseUp + pin.label : T.show + pin.label);
       b.innerHTML = svgPin(!!pin.open) + '<span class="label" aria-hidden="true"></span>';
       b.querySelector(".label").textContent = pin.label;
       b.addEventListener("click", function () {
@@ -208,7 +220,7 @@
     swapScene(PLACES[pin.open], pin, "in").then(function () {
       renderPins();
       busy = false;
-      announce("Opened " + PLACES[pin.open].name);
+      announce(T.opened + PLACES[pin.open].name);
       var first = pinsEl.querySelector(".pin");
       if (first && root.contains(document.activeElement) === false) first.focus({ preventScroll: true });
     });
@@ -229,7 +241,7 @@
     swapScene(PLACES[parentId], via, "out").then(function () {
       renderPins();
       busy = false;
-      announce("Back to " + PLACES[parentId].name);
+      announce(T.backTo + PLACES[parentId].name);
       if (!root.contains(document.activeElement)) {
         var target = back.hidden ? pinsEl.querySelector(".pin") : back;
         if (target) target.focus({ preventScroll: true });

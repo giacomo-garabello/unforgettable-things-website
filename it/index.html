@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unforgettable Things – ricorda dove hai messo le cose</title>
+  <meta name="description" content="Metti i pin sulle foto delle tue stanze, con dettagli annidati quanto vuoi: armadio, ripiano, scatola. Scadenze e promemoria, backup .zip, nessun account e nessun tracciamento. Per Android.">
+  <meta name="theme-color" content="#FDEDE7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1714" media="(prefers-color-scheme: dark)">
+  <link rel="alternate" hreflang="en" href="https://unforgettablethings.app/">
+  <link rel="alternate" hreflang="it" href="https://unforgettablethings.app/it/">
+  <link rel="alternate" hreflang="x-default" href="https://unforgettablethings.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Unforgettable Things">
+  <meta property="og:description" content="Ricorda dove hai messo le cose: mettile con un pin sulle foto delle tue stanze, con dettagli annidati quanto vuoi.">
+  <meta property="og:image" content="https://unforgettablethings.app/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/lexend-extrabold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/demo.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Vai al contenuto</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Unforgettable Things, home">
+        <svg viewBox="0 0 66 44" aria-hidden="true"><g stroke="#231A16" stroke-width="3" stroke-linejoin="round"><path d="M11 18a5 5 0 0 1 3.6 8.5c2.6 1.3 4.2 4 4.2 7V42H3.2v-8.5c0-3 1.6-5.7 4.2-7A5 5 0 0 1 11 18z" fill="#FFD84D"/><path d="M30 10a6.5 6.5 0 0 1 4.7 11c3.4 1.6 5.5 5.1 5.5 9V42H19.8V30c0-3.9 2.1-7.4 5.5-9A6.5 6.5 0 0 1 30 10z" fill="#E8452C"/><path d="M52 2a8.5 8.5 0 0 1 6.1 14.4c4.4 2.1 6.4 6.6 6.4 11.6v14H41.5V28c0-5 2-9.5 6.4-11.6A8.5 8.5 0 0 1 52 2z" fill="#1E6E6A"/></g></svg>
+        <span>Unforgettable Things</span>
+      </a>
+      <nav class="site-nav" aria-label="Principale">
+        <a class="opt" href="#how">Come funziona</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="../" hreflang="en" lang="en" aria-label="English version">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title">Dove ho messo<span class="ellipsis">…</span></h1>
+          <p class="lede">Unforgettable Things se lo ricorda per te. Fotografa una stanza, metti un pin dove sono le cose e apri i dettagli fin dove serve: l'armadio, il ripiano in alto, la scatola.</p>
+          <div class="actions">
+            <!-- Quando l'app sarà su Google Play, sostituisci questo <span> con:
+                 <a class="store" href="https://play.google.com/store/apps/details?id=com.unforgettablethings.unforgettable_things"> … </a>
+                 e cambia "Presto su" in "Disponibile su". -->
+            <span class="store">
+              <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="6" y="2" width="14" height="22" rx="3" fill="#fff" stroke="#231A16" stroke-width="2.5"/><path d="M13 8v8m-3.5-3.5L13 16l3.5-3.5" fill="none" stroke="#231A16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><small>Presto su</small><strong>Google Play</strong></span>
+            </span>
+            <a class="text-link" href="#how">Scopri come funziona</a>
+          </div>
+        </div>
+
+        <div class="demo" id="demo" aria-label="Prova: un ingresso di esempio con i pin">
+          <div class="demo-bar">
+            <button class="back" type="button" hidden aria-label="Indietro">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ol class="crumbs" aria-label="Sei qui"></ol>
+          </div>
+          <div class="frame">
+            <div class="photo">
+              <div class="photo-clip">
+                <div class="scene"><img src="../assets/img/scene-hallway.svg" alt="Un ingresso con un armadio, una consolle e un portaombrelli"></div>
+              </div>
+              <div class="pins"></div>
+              <div class="sheet" hidden tabindex="-1" role="region" aria-label="Dettagli del pin">
+                <div class="date-tile" hidden aria-hidden="true"><span class="m"></span><span class="d"></span></div>
+                <div class="sheet-body"><h3></h3><p></p></div>
+                <button class="close" type="button" aria-label="Chiudi">
+                  <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <p class="demo-hint">
+            <span><svg viewBox="0 0 44 50" aria-hidden="true"><path d="M22 45 13.7 27.3A13 13 0 1 1 30.3 27.3Z" fill="#E8452C" stroke="#231A16" stroke-width="3"/></svg>Apre un dettaglio</span>
+            <span><svg viewBox="0 0 44 50" aria-hidden="true"><path d="M22 45 13.7 27.3A13 13 0 1 1 30.3 27.3Z" fill="#1E6E6A" stroke="#231A16" stroke-width="3"/></svg>Una cosa che hai messo via</span>
+          </p>
+          <p class="sr-status sr-only" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">Come funziona</h2>
+          <p>Gli elenchi di scatole ed etichette invecchiano in fretta. La foto del ripiano vero no, perché ti mostra il posto proprio come lo vedrai quando andrai a cercare.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <div class="doll"><svg viewBox="0 0 24 34" aria-hidden="true"><path d="M12 2a6 6 0 0 1 4.3 10.2c3.2 1.5 5.2 4.7 5.2 8.3V32H2.5V20.5c0-3.6 2-6.8 5.2-8.3A6 6 0 0 1 12 2z" fill="#FFD84D" stroke="#231A16" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+            <h3>Fotografa una stanza</h3>
+            <p>Tieni il telefono in orizzontale per far entrare tutta la stanza. Il garage, la cantina, l'ingresso: ovunque finiscano le cose.</p>
+          </li>
+          <li>
+            <div class="doll"><svg viewBox="0 0 24 34" aria-hidden="true"><path d="M12 2a6 6 0 0 1 4.3 10.2c3.2 1.5 5.2 4.7 5.2 8.3V32H2.5V20.5c0-3.6 2-6.8 5.2-8.3A6 6 0 0 1 12 2z" fill="#E8452C" stroke="#231A16" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+            <h3>Metti un pin dove sono le cose</h3>
+            <p>Tocca la foto per aggiungere un pin. Un pin può essere una cosa, oppure aprire la foto di un dettaglio: l'armadio, il ripiano, la scatola, con tutti i livelli che vuoi.</p>
+          </li>
+          <li>
+            <div class="doll"><svg viewBox="0 0 24 34" aria-hidden="true"><path d="M12 2a6 6 0 0 1 4.3 10.2c3.2 1.5 5.2 4.7 5.2 8.3V32H2.5V20.5c0-3.6 2-6.8 5.2-8.3A6 6 0 0 1 12 2z" fill="#1E6E6A" stroke="#231A16" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+            <h3>Ritrovala dopo mesi</h3>
+            <p>Cercala per nome, oppure apri la stanza e segui i pin fino a lei.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="features-title">Per le cose che ti servono una volta l'anno</h2>
+          <p>Documenti, attrezzatura stagionale, la chiave di scorta, quel cacciavite speciale. Le cose facili da mettere via e difficili da ritrovare.</p>
+        </div>
+        <div class="features">
+          <dl class="feature-list">
+            <div>
+              <span class="dot" style="background:var(--butter)" aria-hidden="true"></span>
+              <dt>Scadenze e promemoria</dt>
+              <dd>Aggiungili a qualsiasi pin. Le date in arrivo finiscono nella lista In scadenza, e il telefono ti avvisa alle 9:00 del giorno stesso.</dd>
+            </div>
+            <div>
+              <span class="dot" style="background:var(--tomato)" aria-hidden="true"></span>
+              <dt>Ricerca</dt>
+              <dd>Scrivi qualche lettera per trovare qualsiasi stanza, foto o pin, poi segui i pin fino a dove si trova.</dd>
+            </div>
+            <div>
+              <span class="dot" style="background:var(--teal)" aria-hidden="true"></span>
+              <dt>Eliminati di recente e Annulla</dt>
+              <dd>Stanze, foto e pin eliminati restano per 2 giorni, o per quanto scegli tu, e Annulla compare subito dopo l'eliminazione.</dd>
+            </div>
+            <div>
+              <span class="dot" style="background:#fff" aria-hidden="true"></span>
+              <dt>Backup che tieni tu</dt>
+              <dd>Esporta un .zip con tutte le stanze, i pin, le date e le foto, e invialo a File, Drive o per email. Importalo su un nuovo telefono e ritrovi tutto.</dd>
+            </div>
+            <div>
+              <span class="dot" style="background:#CDE8E5" aria-hidden="true"></span>
+              <dt>Italiano e inglese</dt>
+              <dd>L'app segue la lingua del telefono, oppure puoi sceglierla nelle Impostazioni.</dd>
+            </div>
+          </dl>
+
+          <aside class="due" aria-label="Esempio della lista In scadenza">
+            <h3>In scadenza</h3>
+            <p>Scadenze e promemoria dei tuoi pin. Toccane uno per vedere dov'è.</p>
+            <ul>
+              <li>
+                <div class="date-tile soon" aria-hidden="true"><span class="m">NOV</span><span class="d">18</span></div>
+                <div><strong>Estintore</strong><span>Scadenza in Garage</span></div>
+              </li>
+              <li>
+                <div class="date-tile" aria-hidden="true"><span class="m">GEN</span><span class="d">9</span></div>
+                <div><strong>Pile del rilevatore di fumo</strong><span>Promemoria in Cucina › Sotto il lavello</span></div>
+              </li>
+              <li>
+                <div class="date-tile" aria-hidden="true"><span class="m">MAR</span><span class="d">14</span></div>
+                <div><strong>Passaporti</strong><span>Scadenza in Ingresso › Armadio › Scatola in alto</span></div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div>
+          <h2 id="privacy-title">Le tue cose restano sul tuo telefono</h2>
+          <p class="lead">Nessun account, nessun server, nessuna pubblicità. Niente di ciò che aggiungi lascia il telefono, a meno che non sia tu a esportarlo. <a href="privacy.html">Leggi l'informativa sulla privacy</a></p>
+        </div>
+        <ul class="promises">
+          <li>
+            <svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#fff" stroke="#231A16" stroke-width="2.5"/><path d="m9 15.5 4 4 8-9" fill="none" stroke="#231A16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Nessun tracciamento</strong><span>L'app non ha analytics, reti pubblicitarie né segnalazione automatica degli arresti anomali. Non c'è nessuno a cui registrarsi.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#fff" stroke="#231A16" stroke-width="2.5"/><path d="m9 15.5 4 4 8-9" fill="none" stroke="#231A16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Foto salvate senza posizione</strong><span>Quando aggiungi una foto, l'app rimuove la posizione GPS e i dati della fotocamera. L'immagine resta identica.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#fff" stroke="#231A16" stroke-width="2.5"/><path d="m9 15.5 4 4 8-9" fill="none" stroke="#231A16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Fuori dal backup cloud di Google</strong><span>Le tue stanze e le tue foto non finiscono nel cloud. Usa Esporta backup per una copia che controlli tu.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#fff" stroke="#231A16" stroke-width="2.5"/><path d="m9 15.5 4 4 8-9" fill="none" stroke="#231A16" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Gli errori restano a te</strong><span>Se qualcosa va storto, l'app tiene un breve registro sul telefono. Arriva allo sviluppatore solo se lo copi e lo invii tu.</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Giacomo Garabello</p>
+      <nav aria-label="Piè di pagina">
+        <a href="privacy.html">Informativa sulla privacy</a>
+        <a href="mailto:feedback@unforgettablethings.app">Contatti</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

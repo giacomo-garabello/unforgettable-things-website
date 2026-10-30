@@ -12,6 +12,7 @@ Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no cookie
 |---|---|
 | `index.html` | landing page |
 | `privacy.html` | privacy policy (the URL to give Google Play: `…/privacy.html`) |
+| `it/index.html`, `it/privacy.html` | Italian versions; keep them in step with the English pages. The demo's Italian labels are in `assets/js/demo.js` |
 | `404.html` | shown by GitHub Pages for missing pages |
 | `assets/css/site.css` | all styles; colours match the app's Matryoshka theme in `lib/ui.dart` |
 | `assets/js/demo.js` | the hero demo: places, pins and their positions |
