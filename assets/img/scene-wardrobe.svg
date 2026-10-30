@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of an open wardrobe with boxes on the top shelf, hanging coats and drawers">
+  <g stroke="#231A16" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- inside back panel and frame -->
+    <rect x="0" y="0" width="480" height="360" fill="#FFF6F2" stroke="none"/>
+    <rect x="18" y="14" width="444" height="332" rx="6" fill="#FBE3DA"/>
+    <path d="M60 14 V346 M120 14 V346 M180 14 V346 M240 14 V346 M300 14 V346 M360 14 V346 M420 14 V346" stroke="#F6D5C8" stroke-width="2"/>
+
+    <!-- top shelf -->
+    <rect x="18" y="114" width="444" height="12" fill="#E2C3B7"/>
+
+    <!-- box (left) -->
+    <rect x="38" y="62" width="96" height="52" rx="3" fill="#F6D5C8"/>
+    <rect x="38" y="62" width="96" height="12" rx="3" fill="#E2C3B7" stroke-width="2"/>
+    <rect x="74" y="86" width="24" height="12" rx="2" fill="#FFFFFF" stroke-width="2"/>
+
+    <!-- cardboard box (the close-up) -->
+    <path d="M164 50 H284 V114 H164 Z" fill="#E8C49A"/>
+    <path d="M164 50 L176 34 H296 L284 50" fill="#F1D4B0"/>
+    <path d="M284 50 L296 34 V98 L284 114" fill="#D9AE80"/>
+    <line x1="224" y1="50" x2="224" y2="114" stroke="#C99A6B" stroke-width="6"/>
+    <line x1="164" y1="50" x2="284" y2="50"/>
+
+    <!-- folded duvet stack -->
+    <rect x="316" y="94" width="126" height="20" rx="9" fill="#CDE8E5"/>
+    <rect x="322" y="76" width="114" height="20" rx="9" fill="#FFFFFF"/>
+    <rect x="316" y="58" width="126" height="20" rx="9" fill="#CDE8E5"/>
+    <path d="M346 64 h40 M352 100 h56" stroke="#1E6E6A" stroke-width="2"/>
+
+    <!-- hanging rail -->
+    <path d="M30 158 H450" stroke-width="6"/>
+    <path d="M24 150 h14 v16 h-14 z M442 150 h14 v16 h-14 z" fill="#E2C3B7" stroke-width="2"/>
+
+    <!-- ski jacket -->
+    <path d="M98 158 v8 l-30 14 h60 l-30 -14" fill="none" stroke-width="2.5"/>
+    <path d="M70 180 c-14 4 -22 16 -26 34 l-8 64 h20 l4 -50 l6 74 h64 l6 -74 l4 50 h20 l-8 -64 c-4 -18 -12 -30 -26 -34 z" fill="#FFD84D"/>
+    <path d="M98 180 V300" stroke-width="2"/>
+    <path d="M70 230 h56" stroke-width="2"/>
+
+    <!-- long coat -->
+    <path d="M200 158 v8 l-28 14 h56 l-28 -14" fill="none" stroke-width="2.5"/>
+    <path d="M174 180 c-10 6 -16 20 -16 40 l-4 116 h92 l-4 -116 c0 -20 -6 -34 -16 -40 z" fill="#E2C3B7"/>
+    <path d="M190 180 l10 34 l10 -34" fill="#FFF6F2" stroke-width="2"/>
+    <circle cx="204" cy="240" r="3" fill="#231A16" stroke="none"/>
+    <circle cx="204" cy="268" r="3" fill="#231A16" stroke="none"/>
+
+    <!-- shirts -->
+    <path d="M286 158 v8 l-24 12 h48 l-24 -12" fill="none" stroke-width="2.5"/>
+    <path d="M264 178 l-14 18 l10 10 l6 -8 v84 h40 v-84 l6 8 l10 -10 l-14 -18 z" fill="#FFFFFF"/>
+    <path d="M330 158 v8 l-24 12 h48 l-24 -12" fill="none" stroke-width="2.5"/>
+    <path d="M308 178 l-14 18 l10 10 l6 -8 v84 h40 v-84 l6 8 l10 -10 l-14 -18 z" fill="#CDE8E5"/>
+
+    <!-- drawers -->
+    <rect x="378" y="232" width="74" height="54" rx="4" fill="#FFF6F2"/>
+    <rect x="378" y="286" width="74" height="54" rx="4" fill="#FFF6F2"/>
+    <rect x="403" y="254" width="24" height="8" rx="4" fill="#FFD84D" stroke-width="2"/>
+    <rect x="403" y="308" width="24" height="8" rx="4" fill="#FFD84D" stroke-width="2"/>
+
+    <!-- shoes -->
+    <path d="M40 336 c0 -12 6 -18 14 -18 c8 0 10 8 22 12 c8 3 10 6 10 6 z" fill="#1E6E6A"/>
+    <path d="M96 336 c0 -12 6 -18 14 -18 c8 0 10 8 22 12 c8 3 10 6 10 6 z" fill="#1E6E6A"/>
+  </g>
+</svg>

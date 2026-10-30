@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of a hallway with a wardrobe, a console table and an umbrella stand">
+  <g stroke="#231A16" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- wall and floor -->
+    <rect x="0" y="0" width="480" height="292" fill="#F6D5C8" stroke="none"/>
+    <rect x="0" y="292" width="480" height="68" fill="#E2C3B7" stroke="none"/>
+    <path d="M60 330 H170 M215 312 H330 M360 340 H470 M10 316 H40" stroke="#CDA999" stroke-width="2"/>
+    <line x1="0" y1="292" x2="480" y2="292"/>
+    <rect x="0" y="282" width="480" height="10" fill="#FFF6F2" stroke="none"/>
+    <line x1="0" y1="282" x2="480" y2="282" stroke-width="2"/>
+
+    <!-- wardrobe -->
+    <rect x="52" y="46" width="168" height="16" rx="3" fill="#E2C3B7"/>
+    <rect x="62" y="62" width="148" height="222" rx="4" fill="#FFF6F2"/>
+    <line x1="136" y1="62" x2="136" y2="284"/>
+    <rect x="76" y="80" width="46" height="88" rx="6" fill="#FBE3DA" stroke-width="2"/>
+    <rect x="150" y="80" width="46" height="88" rx="6" fill="#FBE3DA" stroke-width="2"/>
+    <rect x="76" y="184" width="46" height="84" rx="6" fill="#FBE3DA" stroke-width="2"/>
+    <rect x="150" y="184" width="46" height="84" rx="6" fill="#FBE3DA" stroke-width="2"/>
+    <circle cx="128" cy="176" r="5" fill="#FFD84D"/>
+    <circle cx="144" cy="176" r="5" fill="#FFD84D"/>
+    <path d="M70 284 v12 h12 v-12 M190 284 v12 h12 v-12" fill="#E2C3B7"/>
+
+    <!-- picture -->
+    <rect x="252" y="78" width="96" height="70" rx="4" fill="#FFFFFF"/>
+    <rect x="262" y="88" width="76" height="50" rx="2" fill="#CDE8E5" stroke-width="2"/>
+    <circle cx="318" cy="104" r="8" fill="#FFD84D" stroke-width="2"/>
+    <path d="M262 138 L284 112 L300 126 L314 116 L338 138 Z" fill="#1E6E6A" stroke-width="2"/>
+
+    <!-- console table -->
+    <rect x="240" y="196" width="140" height="12" rx="3" fill="#E2C3B7"/>
+    <rect x="252" y="208" width="116" height="34" rx="3" fill="#FFF6F2"/>
+    <rect x="296" y="220" width="28" height="8" rx="4" fill="#FFD84D" stroke-width="2"/>
+    <path d="M256 242 L250 300 M364 242 L370 300"/>
+    <path d="M272 196 c0 -16 40 -16 40 0 z" fill="#FFFFFF"/>
+    <path d="M330 196 v-26 c0 -8 14 -8 14 0 v26" fill="#CDE8E5" stroke-width="2"/>
+    <path d="M334 172 c-6 -10 -2 -20 6 -22 c2 8 0 16 -6 22 z M340 170 c8 -6 16 -4 18 2 c-6 4 -12 4 -18 -2 z" fill="#1E6E6A" stroke-width="2"/>
+
+    <!-- coat hooks -->
+    <rect x="396" y="92" width="72" height="10" rx="3" fill="#E2C3B7"/>
+    <path d="M412 102 v8 c0 6 8 6 8 0 M452 102 v8 c0 6 8 6 8 0" fill="none" stroke-width="2.5"/>
+    <path d="M444 110 c-10 4 -16 16 -18 40 l-4 70 h52 l-4 -70 c-2 -24 -8 -36 -18 -40 z" fill="#FFD84D"/>
+    <path d="M449 112 l-6 22 l6 -4 l6 4 z" fill="#FFF6F2" stroke-width="2"/>
+    <line x1="449" y1="140" x2="449" y2="216" stroke-width="2"/>
+
+    <!-- umbrella stand -->
+    <path d="M382 176 c-4 -10 4 -18 12 -12" fill="none"/>
+    <path d="M412 184 c-2 -12 8 -18 14 -10" fill="none"/>
+    <path d="M394 170 L398 236" />
+    <path d="M424 178 L414 236" />
+    <path d="M380 236 L388 300 H426 L434 236 Z" fill="#CDE8E5"/>
+    <line x1="382" y1="252" x2="432" y2="252" stroke-width="2"/>
+  </g>
+</svg>
