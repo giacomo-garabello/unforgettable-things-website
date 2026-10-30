@@ -37,3 +37,4 @@ Then open http://localhost:8000.
 ## Contact
 
 `feedback@unforgettablethings.app` is forwarded by Cloudflare Email Routing. It's the contact address in the footer and the privacy policy.
+`bugs@unforgettablethings.app` goes to a Cloudflare Email Worker that forwards a copy to the same inbox and opens a private issue (label `from-email`) in the app repo.
