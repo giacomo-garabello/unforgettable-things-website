@@ -1,8 +1,8 @@
 # Unforgettable Things website
 
-The website for the [Unforgettable Things](https://giacomo-garabello.github.io/unforgettable-things-website/) Android app: a landing page with a small interactive demo, and the privacy policy that Google Play asks for.
+The website for the [Unforgettable Things](https://unforgettablethings.app) Android app: a landing page with a small interactive demo, and the privacy policy that Google Play asks for.
 
-Live at **https://giacomo-garabello.github.io/unforgettable-things-website/**, published by GitHub Pages from the root of `main`. Every push to `main` updates the site within a minute or two.
+Live at **https://unforgettablethings.app**, published by GitHub Pages from the root of `main`. The custom domain is set in `CNAME`; DNS is on Cloudflare (records set to DNS only, not proxied). Every push to `main` updates the site within a minute or two.
 
 Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no cookies, no analytics, no third-party requests.
 
@@ -34,9 +34,6 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
-## Custom domain
+## Contact
 
-1. In **Settings › Pages › Custom domain**, enter the domain and save. GitHub adds a `CNAME` file to the repo.
-2. At your domain registrar, point the domain at GitHub Pages (an `A`/`AAAA` record for an apex domain, a `CNAME` to `giacomo-garabello.github.io` for a subdomain).
-3. Once DNS works, tick **Enforce HTTPS**.
-4. Update the absolute URLs: `og:image` in `index.html`, and the `/unforgettable-things-website/` prefix in `404.html` (remove it).
+`feedback@unforgettablethings.app` is forwarded by Cloudflare Email Routing. It's the contact address in the footer and the privacy policy.
