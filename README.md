@@ -14,12 +14,14 @@ Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no cookie
 | `privacy.html` | privacy policy (the URL to give Google Play: `…/privacy.html`) |
 | `it/index.html`, `it/privacy.html` | Italian versions; keep them in step with the English pages. The demo's Italian labels are in `assets/js/demo.js` |
 | `404.html` | shown by GitHub Pages for missing pages |
+| `join.html` | what an invite link (`/join#<code>.<key>`) shows on a phone without the app. With the app, the link opens in it. The part after `#` holds the household key and never reaches the site: keep this page free of scripts |
+| `.well-known/assetlinks.json` | lets the app open `/join` links itself (Android App Links). Lists the SHA-256 of each key the app is signed with: the upload key now, and Play's app signing key once the app is on Google Play (Play Console › Test and release › App integrity) |
 | `assets/css/site.css` | all styles; colours match the app's Matryoshka theme in `lib/ui.dart` |
 | `assets/js/demo.js` | the hero demo: places, pins and their positions |
 | `assets/img/scene-*.svg` | the illustrated hallway, wardrobe and box used by the demo |
 | `assets/img/og.png` | preview image for links shared on chat apps and social sites |
 | `assets/fonts/` | Lexend, subset to Latin, under the SIL Open Font License (`OFL.txt`) |
-| `.nojekyll` | tells GitHub Pages to serve the files as they are |
+| `.nojekyll` | tells GitHub Pages to serve the files as they are, `.well-known/` included |
 
 ## Common edits
 
