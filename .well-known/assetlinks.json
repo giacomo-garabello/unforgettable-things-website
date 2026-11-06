@@ -5,7 +5,10 @@
       "namespace": "android_app",
       "package_name": "com.unforgettablethings.unforgettable_things",
       "sha256_cert_fingerprints": [
-        "8E:E1:12:C7:80:BB:15:CF:60:AF:BB:23:EB:AC:D6:18:4F:AA:A2:3D:18:1E:AE:96:06:4D:66:60:D0:77:48:89"
+        "8E:E1:12:C7:80:BB:15:CF:60:AF:BB:23:EB:AC:D6:18:4F:AA:A2:3D:18:1E:AE:96:06:4D:66:60:D0:77:48:89",
+        "65:20:80:65:80:92:19:C8:B0:D1:DB:A4:6D:4E:B7:1D:05:77:F0:30:39:A5:C4:A5:DB:36:06:2E:FD:DA:0B:50", 
+        "9A:9C:97:40:69:82:A9:59:92:CD:94:38:DA:78:E0:1E:09:72:2B:23:E9:0D:F3:BC:CE:2C:8B:0B:62:AB:34:79", 
+        "63:50:2A:99:B3:B2:DE:FE:E4:EC:C6:E9:F8:D6:D6:B4:CA:19:BC:8B:9C:E5:0E:0D:35:DB:A4:CF:5D:2C:96:30"
       ]
     }
   }
