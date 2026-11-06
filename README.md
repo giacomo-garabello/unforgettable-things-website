@@ -14,6 +14,7 @@ Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no cookie
 | `privacy.html` | privacy policy (the URL to give Google Play: `…/privacy.html`) |
 | `it/index.html`, `it/privacy.html` | Italian versions; keep them in step with the English pages. The demo's Italian labels are in `assets/js/demo.js` |
 | `404.html` | shown by GitHub Pages for missing pages |
+| `delete-account.html`, `it/delete-account.html` | how to delete a sync account and what happens to its data, with or without the app. The URL to give Google Play's Data safety form for account deletion: `…/delete-account.html`. The deletion itself is on the sync server's own page, `https://sync.unforgettablethings.app/delete-account` (`server/src/delete-page.ts` in the app repo), so this site stays free of scripts |
 | `join.html` | what an invite link (`/join#<code>.<key>`) shows on a phone without the app. With the app, the link opens in it. The part after `#` holds the household key and never reaches the site: keep this page free of scripts |
 | `.well-known/assetlinks.json` | lets the app open `/join` links itself (Android App Links). Lists the SHA-256 of each key the app is signed with: the upload key now, and Play's app signing key once the app is on Google Play (Play Console › Test and release › App integrity) |
 | `assets/css/site.css` | all styles; colours match the app's Matryoshka theme in `lib/ui.dart` |

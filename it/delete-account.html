@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elimina il tuo account di sincronizzazione – Unforgettable Things</title>
+  <meta name="description" content="Come eliminare il tuo account di sincronizzazione di Unforgettable Things e i suoi dati, con o senza l'app.">
+  <meta name="theme-color" content="#FDEDE7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1714" media="(prefers-color-scheme: dark)">
+  <link rel="alternate" hreflang="en" href="https://unforgettablethings.app/delete-account.html">
+  <link rel="alternate" hreflang="it" href="https://unforgettablethings.app/it/delete-account.html">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Vai al contenuto</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Unforgettable Things, home">
+        <svg viewBox="0 0 66 44" aria-hidden="true"><g stroke="#231A16" stroke-width="3" stroke-linejoin="round"><path d="M11 18a5 5 0 0 1 3.6 8.5c2.6 1.3 4.2 4 4.2 7V42H3.2v-8.5c0-3 1.6-5.7 4.2-7A5 5 0 0 1 11 18z" fill="#FFD84D"/><path d="M30 10a6.5 6.5 0 0 1 4.7 11c3.4 1.6 5.5 5.1 5.5 9V42H19.8V30c0-3.9 2.1-7.4 5.5-9A6.5 6.5 0 0 1 30 10z" fill="#E8452C"/><path d="M52 2a8.5 8.5 0 0 1 6.1 14.4c4.4 2.1 6.4 6.6 6.4 11.6v14H41.5V28c0-5 2-9.5 6.4-11.6A8.5 8.5 0 0 1 52 2z" fill="#1E6E6A"/></g></svg>
+        <span>Unforgettable Things</span>
+      </a>
+      <nav class="site-nav" aria-label="Principale">
+        <a class="opt" href="./#how">Come funziona</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="../delete-account.html" hreflang="en" lang="en" aria-label="English version">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="prose">
+    <div class="wrap">
+      <!--
+        La pagina che chiede Google Play: come eliminare l'account e i suoi
+        dati senza l'app. L'eliminazione avviene sulla pagina del server di
+        sincronizzazione (server/src/delete-page.ts nel repo dell'app), così
+        questa resta senza script, come il resto del sito.
+      -->
+      <h1>Elimina il tuo account di sincronizzazione</h1>
+      <p class="meta">Unforgettable Things per Android, di Giacomo Garabello.</p>
+
+      <div class="summary">
+        <p><strong>L'app in sé non ha account.</strong> Ce l'ha solo la sincronizzazione nel cloud, facoltativa e a pagamento, e nasce quando accedi con Google. Qui trovi come eliminarlo, con o senza l'app, e cosa succede ai tuoi dati.</p>
+      </div>
+
+      <h2>Dall'app</h2>
+      <ol>
+        <li>Apri <strong>Account</strong>.</li>
+        <li>Tocca la matita accanto al tuo nome, in alto.</li>
+        <li>Scegli <strong>Elimina l'account di sincronizzazione</strong>, poi conferma.</li>
+      </ol>
+
+      <h2>Senza l'app</h2>
+      <p>Apri la pagina di eliminazione, accedi con l'account Google che usi per la sincronizzazione e conferma. Funziona in qualsiasi browser, su qualsiasi dispositivo.</p>
+      <p><a class="store" style="margin:0" href="https://sync.unforgettablethings.app/delete-account?lang=it"><span><strong>Elimina il mio account</strong></span></a></p>
+
+      <h2>Cosa viene eliminato, subito</h2>
+      <ul>
+        <li>Il tuo account sul server di sincronizzazione: l'ID del tuo account Google, l'indirizzo email e i tuoi accessi.</li>
+        <li>Le copie cifrate del catalogo che i tuoi telefoni hanno inviato, e il dato del tuo abbonamento Google Play.</li>
+        <li>Se nella tua famiglia non resta nessun altro, tutti i suoi file e le sue foto cifrati.</li>
+        <li>Il tuo abbonamento Google Play non si rinnova più. Resta attivo fino alla fine del periodo già pagato.</li>
+        <li>Dall'app, anche la copia della chiave della famiglia nel tuo Google Drive. Senza l'app resta lì, ma senza i file non apre più nulla. Per toglierla tu: Google Drive sul web, Impostazioni, Gestisci app, Unforgettable Things, Opzioni, Elimina i dati nascosti dell'app.</li>
+      </ul>
+
+      <h2>Cosa resta, e per quanto</h2>
+      <ul>
+        <li>Il catalogo sui tuoi telefoni. Non è mai dipeso dall'account, quindi l'app continua a funzionare senza sincronizzazione.</li>
+        <li>In una famiglia, quello che hai condiviso resta agli altri membri.</li>
+        <li>Il database del server di sincronizzazione si può riportare a un momento precedente fino a 30 giorni prima, una protezione del suo fornitore, Cloudflare. Dopo 30 giorni l'account eliminato sparisce anche da quella cronologia. I file eliminati non vengono conservati.</li>
+        <li>I log del server non contengono mai i tuoi dati: solo il tipo di richiesta, il suo esito e la sua dimensione.</li>
+        <li>Google Play conserva i propri dati sui tuoi acquisti, secondo l'informativa sulla privacy di Google.</li>
+      </ul>
+
+      <h2>Domande</h2>
+      <p>Scrivi a <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Giacomo Garabello</p>
+      <nav aria-label="Piè di pagina">
+        <a href="privacy.html">Informativa sulla privacy</a>
+        <a href="mailto:feedback@unforgettablethings.app">Contatti</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
