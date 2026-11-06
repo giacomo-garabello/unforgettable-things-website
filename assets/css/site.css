@@ -577,8 +577,8 @@ a.store:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--lin
 .prose .summary p + p { margin-top: 10px; }
 .prose h2 { font-size: 1.5rem; margin-top: 48px; letter-spacing: -0.015em; }
 .prose h3 { font-size: 1.125rem; margin-top: 24px; }
-.prose p, .prose ul { margin-top: 12px; }
-.prose ul { padding-left: 1.25em; }
+.prose p, .prose ul, .prose ol { margin-top: 12px; }
+.prose ul, .prose ol { padding-left: 1.25em; }
 .prose li + li { margin-top: 6px; }
 .prose li::marker { color: var(--tomato); }
 .prose table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.9375rem; }
