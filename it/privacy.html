@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Informativa sulla privacy – Unforgettable Things</title>
-  <meta name="description" content="Unforgettable Things tiene tutto sul tuo telefono: nessun account, nessun server, nessuna pubblicità, nessun analytics. Cosa salva l'app, dove, e come eliminarlo.">
+  <meta name="description" content="Nessuna pubblicità, nessun analytics, nessun tracciamento. Cosa tiene Unforgettable Things sul tuo telefono, cosa invia al server la sincronizzazione facoltativa (cifrato prima sul telefono), per quanto viene conservato e come eliminarlo.">
   <meta name="theme-color" content="#FDEDE7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1E1714" media="(prefers-color-scheme: dark)">
   <link rel="alternate" hreflang="en" href="https://unforgettablethings.app/privacy.html">
@@ -33,76 +33,177 @@
 
   <main id="main" class="prose">
     <div class="wrap">
+      <!--
+        Scritta sulla build 106 dell'app (tag build-106 nel repo dell'app) e
+        sul suo server di sincronizzazione (server/ nello stesso commit).
+        Tienila allineata a ../privacy.html, data di entrata in vigore compresa.
+      -->
       <h1>Informativa sulla privacy</h1>
-      <p class="meta">Unforgettable Things per Android. In vigore dal 30 ottobre 2026.</p>
+      <p class="meta">Unforgettable Things per Android. In vigore dal 6 novembre 2026.</p>
 
       <div class="summary">
-        <p><strong>In breve.</strong> Unforgettable Things non raccoglie nulla su di te. Non ci sono account, server, pubblicità né analytics.</p>
-        <p>Tutto ciò che aggiungi resta sul tuo telefono. Ne esce solo quando esporti un backup o invii qualcosa tu, e va dove scegli tu.</p>
+        <p><strong>In breve.</strong> Nessuna pubblicità, nessun analytics, nessun tracciamento. Senza sincronizzazione, tutto ciò che aggiungi resta sul tuo telefono, e ne esce solo quando sei tu a esportare o condividere qualcosa.</p>
+        <p><strong>La sincronizzazione è facoltativa e a pagamento.</strong> Quando la attivi, il catalogo e le foto vengono cifrati sul telefono prima di partire, con una chiave che il server non riceve mai. Quindi io non posso leggerli, e nemmeno Cloudflare, che ospita il server. Il server conosce invece il tuo indirizzo email, il tuo nome, chi fa parte della tua famiglia e se hai un abbonamento.</p>
       </div>
 
-      <h2>Chi sviluppa l'app</h2>
-      <p>Unforgettable Things è sviluppata da Giacomo Garabello, sviluppatore indipendente. Questa informativa riguarda l'app per Android e questo sito. Qui sotto, "io" indica lo sviluppatore.</p>
+      <h2 id="who">Chi è responsabile</h2>
+      <p>Unforgettable Things è sviluppata da Giacomo Garabello, sviluppatore indipendente con sede in Italia. Sono il titolare del trattamento dei dati descritti in questa informativa, ai sensi del Regolamento generale sulla protezione dei dati dell'UE (GDPR). Qui sotto, "io" indica lo sviluppatore.</p>
+      <p>Questa informativa riguarda l'app per Android, il suo server di sincronizzazione su sync.unforgettablethings.app e questo sito. Puoi contattarmi a <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
 
-      <h2>Cosa salva l'app, e dove</h2>
-      <p>Tutto ciò che segue è conservato nella memoria privata dell'app sul tuo telefono. Io non ne ho una copia e non ho modo di vederlo.</p>
+      <h2 id="phone">Cosa tiene l'app sul tuo telefono</h2>
+      <p>Tutto ciò che segue è conservato nella memoria privata dell'app sul tuo telefono. Senza sincronizzazione, io non ne ho una copia e non ho modo di vederlo.</p>
       <table>
         <thead><tr><th scope="col">Cosa</th><th scope="col">Perché viene conservato</th></tr></thead>
         <tbody>
-          <tr><td>Stanze, foto e pin</td><td>I nomi che scrivi, le foto che aggiungi e la posizione di ogni pin sulla sua foto. È lo scopo stesso dell'app.</td></tr>
-          <tr><td>Scadenze e promemoria</td><td>Le date e le note che aggiungi ai pin, per la lista In scadenza e le notifiche.</td></tr>
-          <tr><td>Cronologia delle modifiche</td><td>Cosa è cambiato e quando, perché Annulla funzioni e tu possa vedere la cronologia di un pin. Conservata per 90 giorni e non inclusa nei backup.</td></tr>
+          <tr><td>Stanze, foto e pin</td><td>I nomi e le etichette che scrivi, le foto che aggiungi e la posizione di ogni pin sulla sua foto. È lo scopo stesso dell'app.</td></tr>
+          <tr><td>Date e promemoria</td><td>Le date che aggiungi ai pin, con note, avvisi anticipati e ripetizioni, per la lista In scadenza e le notifiche.</td></tr>
+          <tr><td>Cronologia delle modifiche</td><td>Cosa è cambiato, quando e chi l'ha cambiato, perché Annulla funzioni e tu possa vedere la cronologia di un pin. Conservata per 90 giorni. Non è inclusa nei backup e la sincronizzazione non la invia.</td></tr>
           <tr><td>Eliminati di recente</td><td>Le cose che hai eliminato, conservate per 2 giorni di default (puoi cambiarlo nelle Impostazioni) per poterle recuperare.</td></tr>
-          <tr><td>Impostazioni</td><td>Tema, lingua, per quanto tenere le cose eliminate, il nome che puoi inserire in Account e un ID casuale creato sul telefono. Nome e ID indicano chi ha fatto le modifiche nella cronologia.</td></tr>
-          <tr><td>Registro degli errori</td><td>Fino a 50 errori recenti, per poterli copiare se segnali un problema.</td></tr>
+          <tr><td>Impostazioni</td><td>Tema, lingua, Blocco app, ordinamento, per quanto tenere le cose eliminate, il tuo nome e alcuni ID casuali creati sul telefono. Nome e ID indicano chi ha fatto le modifiche nella cronologia.</td></tr>
+          <tr><td>Registro degli errori</td><td>Fino a 50 errori recenti, nel caso tu segnali un problema.</td></tr>
+          <tr><td>Con la sincronizzazione attiva</td><td>L'indirizzo email, il nome e l'immagine del profilo del tuo account Google; il tuo accesso al server di sincronizzazione e la chiave della tua famiglia, entrambi protetti da una chiave che il Keystore di Android custodisce e non lascia mai uscire dal telefono; e gli ultimi file sincronizzati della famiglia, perché l'app possa unirli.</td></tr>
         </tbody>
       </table>
 
-      <h2>Foto</h2>
+      <h2 id="photos">Foto</h2>
       <p>Aggiungi le foto con la fotocamera o dalla galleria. L'app riceve solo le foto che scegli e non sfoglia mai il resto della galleria.</p>
-      <p>Prima di salvare una foto, l'app ne rimuove i metadati (EXIF, XMP e IPTC), che possono contenere la posizione GPS, il modello della fotocamera e l'ora dello scatto. Resta solo l'orientamento, così la foto si vede dritta. Le foto vengono anche ridimensionate a un massimo di 1600 pixel sul lato lungo per occupare meno spazio.</p>
+      <p>Prima di salvare una foto, l'app ne rimuove i metadati (EXIF, XMP e IPTC), che possono contenere la posizione GPS, il modello della fotocamera e l'ora dello scatto. Resta solo l'orientamento, così la foto si vede dritta. Lo stesso vale per ogni foto che arriva da un backup. Le foto vengono anche ridimensionate a un massimo di 1600 pixel sul lato lungo per occupare meno spazio.</p>
 
-      <h2>Autorizzazioni</h2>
+      <h2 id="permissions">Autorizzazioni</h2>
       <ul>
-        <li><strong>Notifiche.</strong> Richieste la prima volta che aggiungi una data a un pin, per avvisarti alle 9:00 di quel giorno. Le notifiche sono programmate sul telefono, non inviate da un server. Puoi disattivarle nelle impostazioni di Android, che l'interruttore in Account › Impostazioni › Notifiche apre per te.</li>
+        <li><strong>Notifiche.</strong> Richieste la prima volta che aggiungi una data a un pin, per avvisarti alle 9:00 del giorno e di ogni avviso anticipato. Le notifiche sono programmate sul telefono, non inviate da un server. Con il Blocco app attivo non mostrano il nome del pin né dove si trova. Puoi disattivarle nelle impostazioni di Android, che Account › Impostazioni › Notifiche apre per te.</li>
         <li><strong>Avvio all'accensione.</strong> Permette all'app di ripristinare i promemoria programmati dopo il riavvio del telefono. Non fa nient'altro.</li>
+        <li><strong>Impronta o volto.</strong> Per il Blocco app, facoltativo. È la richiesta di Android a controllare impronta, volto, PIN, sequenza o password, e all'app dice solo se il controllo è riuscito. L'app non riceve mai i dati della tua impronta o del tuo volto. Con il Blocco app attivo, l'app non compare nemmeno nella schermata delle app recenti.</li>
+        <li><strong>Internet.</strong> Usato solo dalla sincronizzazione, dall'accesso con Google e dall'abbonamento. Con la sincronizzazione spenta, l'app non si collega a nessun server.</li>
+        <li><strong>Fatturazione di Google Play.</strong> Permette di acquistare l'abbonamento alla sincronizzazione tramite Google Play.</li>
         <li><strong>Fotocamera e foto.</strong> L'app non chiede queste autorizzazioni. "Scatta una foto" apre l'app fotocamera del telefono, e "Scegli dalla galleria" usa il selettore di foto di Android. In entrambi i casi l'app riceve solo la foto che scegli.</li>
       </ul>
 
-      <h2>Cosa non viene raccolto</h2>
-      <p>L'app non ha account, analytics, ID pubblicitario, reti pubblicitarie né segnalazione automatica degli arresti anomali. Non si collega a nessun server e non legge la tua posizione, i contatti o altro sul telefono. Poiché non viene raccolto nulla, nulla viene condiviso o venduto.</p>
+      <h2 id="not-collected">Cosa non viene raccolto</h2>
+      <p>L'app non ha analytics, ID pubblicitario, reti pubblicitarie né segnalazione automatica degli arresti anomali. Non legge la tua posizione, i contatti o altro sul telefono. Nulla di ciò che ti riguarda viene venduto, usato per la pubblicità o per costruire un tuo profilo.</p>
 
-      <h2>Backup e passaggio a un nuovo telefono</h2>
+      <h2 id="backups">Backup, report e condivisione</h2>
       <ul>
-        <li><strong>Esporta backup</strong> crea un .zip con stanze, pin, date e foto (e gli Eliminati di recente, se lo scegli). L'app lo passa a ciò che scegli nel menu di condivisione, come File, Google Drive, l'email o un'app di chat. Da lì si applica l'informativa sulla privacy di quel servizio. Il .zip non è cifrato, quindi conservalo in un posto di cui ti fidi.</li>
-        <li><strong>Importa backup</strong> sostituisce tutto il contenuto dell'app con quello del .zip che scegli.</li>
-        <li><strong>Il backup cloud di Google</strong> è disattivato per questa app, quindi i tuoi dati non vengono copiati automaticamente sui server di Google. Se passi a un nuovo telefono con il trasferimento da telefono a telefono di Android (Android 12 e successivi), i dati possono essere copiati direttamente tra i due telefoni.</li>
+        <li><strong>Esporta</strong> crea un backup .zip o un report PDF, di tutto o di una sola stanza, foto o dettaglio. L'app lo passa a ciò che scegli nel menu di condivisione, come File, Google Drive, l'email o un'app di chat. Da lì si applica l'informativa sulla privacy di quel servizio.</li>
+        <li>Un backup .zip si può <strong>proteggere con una password</strong> (AES-256). La password non viene salvata da nessuna parte, quindi se la dimentichi non si può recuperare. Senza password, il .zip non è cifrato. I report PDF non possono avere una password. Conserva entrambi in un posto di cui ti fidi.</li>
+        <li><strong>Importa backup</strong> aggiunge un .zip a ciò che hai sul telefono, oppure sostituisce tutto con il suo contenuto. In entrambi i casi resta sul tuo telefono.</li>
+        <li><strong>Condividi dov'è</strong> invia un'unica immagine che l'app disegna sul momento: le foto dalla stanza fino a quell'oggetto, con segnato su ognuna solo il pin successivo. Non ha metadati né i nomi di altri pin.</li>
+        <li><strong>Il backup cloud di Google</strong> è disattivato per questa app, quindi i tuoi dati non vengono copiati automaticamente sui server di Google. Se passi a un nuovo telefono con il trasferimento da telefono a telefono di Android (Android 12 e successivi), i dati possono essere copiati direttamente tra i due telefoni. Sul nuovo telefono la sincronizzazione si spegne finché non accedi di nuovo, perché la chiave che protegge il tuo accesso resta su quello vecchio.</li>
       </ul>
 
-      <h2>Segnalazioni di errori</h2>
-      <p>Il registro degli errori resta sul telefono. Se lo copi da Account › Info e me lo invii, riceverò i messaggi di errore tecnici che contiene e l'ora in cui si sono verificati. Li userò solo per risolvere il problema e li eliminerò quando non serviranno più.</p>
+      <h2 id="sync">Sincronizzazione cloud</h2>
+      <p>La sincronizzazione è facoltativa e a pagamento. Resta spenta finché non la attivi in Account › Sincronizzazione. Tiene i telefoni di una famiglia sullo stesso catalogo, foto comprese, e ne conserva una copia al sicuro se un telefono si perde o si rompe.</p>
 
-      <h2>Quando mi scrivi un'email</h2>
-      <p>Se scrivi a feedback@unforgettablethings.app o bugs@unforgettablethings.app, ricevo il tuo indirizzo email, il tuo nome se la tua app di posta lo include, e ciò che scrivi o alleghi. Le email vengono inoltrate alla mia casella da Cloudflare, che gestisce la posta di questo dominio.</p>
-      <p>Le email a bugs@ vengono anche salvate come segnalazioni private nel repository del codice dell'app su GitHub, così posso seguire e risolvere ogni problema. Posso vederle solo io. Uso ciò che mi invii solo per risponderti e migliorare l'app, e puoi chiedermi in qualsiasi momento di eliminare le tue email e le segnalazioni create da esse.</p>
+      <h3>L'accesso con Google</h3>
+      <p>Attivare la sincronizzazione apre l'accesso con Google. Google dà all'app l'indirizzo email, il nome, l'immagine del profilo del tuo account Google e un token di accesso. L'app invia il token al server di sincronizzazione una volta sola; il server lo verifica con Google e tiene solo l'ID del tuo account Google e il tuo indirizzo email. Il tuo nome diventa il tuo nome nell'app, così la tua famiglia vede chi ha cambiato cosa. L'immagine del profilo viene scaricata una volta e resta sul telefono.</p>
+      <p>La sincronizzazione chiede anche l'accesso alla cartella nascosta dell'app nel tuo Google Drive. Lì tiene una copia della chiave della tua famiglia, così un nuovo telefono può aprire i tuoi dati senza nulla da scrivere o ricordare. L'app non vede nessun altro file del tuo Drive, e quella cartella non la puoi sfogliare nemmeno tu.</p>
 
-      <h2>Eliminare i tuoi dati</h2>
-      <p>Puoi eliminare qualsiasi stanza, foto o pin nell'app. Svuota Eliminati di recente per rimuovere subito le cose, senza aspettare il periodo di attesa. Disinstallare l'app elimina tutto ciò che aveva salvato. I backup che hai esportato restano dove li hai salvati finché non li elimini da lì.</p>
+      <h3>Cosa viene cifrato, e chi ha la chiave</h3>
+      <p>Il tuo catalogo (stanze, pin, etichette, date, note e i nomi legati alle modifiche) e ogni foto vengono compressi e poi cifrati sul telefono con AES-256-GCM prima di essere caricati. Ogni famiglia ha la sua chiave casuale a 256 bit. Resta sui telefoni della famiglia e nel Google Drive di ciascun membro, e non arriva mai al server. Anche i nomi dei file delle foto sono sostituiti da codici, così il server non sa quando sono state scattate.</p>
+      <p>Quindi Cloudflare ha i file ma non la chiave, e Google ha la chiave ma non i file. Io non posso leggere il tuo catalogo né vedere le tue foto, e il server non li apre, non li legge e non li registra mai.</p>
 
-      <h2>Minori</h2>
-      <p>L'app è pensata per un pubblico generale. Non raccoglie dati personali da nessuno, minori compresi.</p>
+      <h3>Cosa sa il server di sincronizzazione</h3>
+      <p>Per decidere chi può leggere e scrivere quali file, il server conserva questi dati, non cifrati:</p>
+      <table>
+        <thead><tr><th scope="col">Cosa</th><th scope="col">Perché</th></tr></thead>
+        <tbody>
+          <tr><td>Il tuo account</td><td>L'ID del tuo account Google e il tuo indirizzo email, e quando hai effettuato il primo accesso. L'email è anche il modo in cui posso trovare il tuo account se mi chiedi di eliminarlo.</td></tr>
+          <tr><td>Il tuo nome</td><td>Il nome del tuo account Google, mostrato agli altri membri della famiglia.</td></tr>
+          <tr><td>La tua famiglia</td><td>Chi ne fa parte, chi ne è il proprietario e quando è entrato ciascuno.</td></tr>
+          <tr><td>I tuoi telefoni</td><td>Un ID casuale per ogni telefono, quando ha effettuato l'accesso e l'ultimo giorno in cui si è collegato. Ogni telefono ha il suo accesso, e il server ne conserva solo una copia irreversibile (un hash).</td></tr>
+          <tr><td>I file cifrati</td><td>Le loro dimensioni e quando sono stati caricati, per i 5 GB di spazio della famiglia.</td></tr>
+          <tr><td>Gli inviti</td><td>Chi ha creato ogni invito, chi l'ha usato e quando. Del codice di invito viene conservato solo un hash.</td></tr>
+          <tr><td>Il tuo abbonamento</td><td>Il token di acquisto di Google Play, il piano (mensile o annuale), il suo stato e quando scade.</td></tr>
+        </tbody>
+      </table>
+      <p>Il registro del server annota solo il tipo di richiesta, il suo esito e la sua dimensione: niente indirizzi IP, ID degli account, nomi o contenuti dei file. Come ogni server su internet, vede l'indirizzo IP del tuo telefono mentre risponde a una richiesta, ma non lo conserva. La rete di Cloudflare può trattare gli indirizzi IP per far arrivare il traffico e proteggersi dagli attacchi.</p>
+      <p>Il server e il suo database funzionano su Cloudflare. Il database e i file cifrati sono conservati nell'Unione europea.</p>
 
-      <h2>Questo sito</h2>
+      <h3>Famiglie e inviti</h3>
+      <p>Tutti i membri di una famiglia condividono lo stesso catalogo, quindi ciascuno vede tutto ciò che contiene, e i nomi degli altri. Solo chi paga vede i dettagli dell'abbonamento.</p>
+      <p>Un invito è un link che vale una volta sola, entro 3 giorni. Porta con sé la chiave della famiglia dopo il simbolo #, una parte del link che browser e app non inviano mai a un server, quindi non la vede né il server di sincronizzazione né questo sito. Chiunque apra il link in tempo può entrare e leggere il catalogo della famiglia, quindi invialo solo alla persona che vuoi invitare.</p>
+      <p>Il proprietario può togliere dei membri. Quando qualcuno esce o viene tolto, ciò che ha condiviso resta alla famiglia, e la copia del catalogo sui suoi telefoni resta a lui.</p>
+
+      <h2 id="subscription">L'abbonamento</h2>
+      <p>La sincronizzazione si acquista tramite Google Play, mensile o annuale, e l'abbonamento di un membro vale per tutta la famiglia. Il pagamento lo gestisce Google, quindi io non vedo mai i dati della tua carta o del tuo conto.</p>
+      <p>Quando acquisti, l'app passa a Google Play l'ID casuale del tuo account di sincronizzazione (non la tua email), per collegare l'acquisto al tuo account. Il server verifica ogni acquisto con Google Play e lo conferma, e Google Play avvisa il server di rinnovi, disdette e rimborsi man mano che avvengono. Google mi fornisce anche i report di vendita e un riepilogo di ogni ordine, con dati come il numero d'ordine, il piano, il prezzo, la data e il paese, che conservo per il tempo richiesto dalle norme fiscali. Google gestisce i pagamenti secondo la propria informativa sulla privacy.</p>
+
+      <h2 id="retention">Per quanto tempo vengono conservati</h2>
+      <table>
+        <thead><tr><th scope="col">Cosa</th><th scope="col">Per quanto</th></tr></thead>
+        <tbody>
+          <tr><td>Tutto ciò che è sul telefono</td><td>Finché non lo elimini o disinstalli l'app. Cronologia delle modifiche: 90 giorni. Eliminati di recente: 2 giorni di default. Registro degli errori: gli ultimi 50 errori.</td></tr>
+          <tr><td>Il tuo account di sincronizzazione e i dati dell'abbonamento</td><td>Finché non elimini l'account di sincronizzazione. Nulla li elimina in automatico: se smetti di usare la sincronizzazione, restano finché non elimini l'account o non me lo chiedi.</td></tr>
+          <tr><td>Il tuo accesso su un telefono</td><td>Finché non esci da quel telefono o non elimini l'account di sincronizzazione.</td></tr>
+          <tr><td>Il tuo nome e l'appartenenza alla famiglia</td><td>Finché non esci dalla famiglia o non elimini l'account di sincronizzazione.</td></tr>
+          <tr><td>Il catalogo cifrato di ogni telefono</td><td>Finché non viene eliminato il suo account o la famiglia. Un telefono che esce, o il cui proprietario lascia la famiglia, lascia lì il suo ultimo file, perché gli altri possano unirlo.</td></tr>
+          <tr><td>Le foto cifrate e i dati degli inviti</td><td>Finché la famiglia non viene eliminata, cosa che avviene quando l'ultimo membro esce o elimina il suo account. Per ora, una foto che elimini nell'app resta sul server, sempre cifrata, fino ad allora.</td></tr>
+          <tr><td>Dopo la fine di un abbonamento</td><td>Per 90 giorni i telefoni della famiglia possono ancora scaricare, ma non caricare. Dopo, i file restano sul server finché non vengono eliminati come sopra.</td></tr>
+          <tr><td>Il registro del server</td><td>Fino a 7 giorni, conservato da Cloudflare.</td></tr>
+          <tr><td>Punti di ripristino</td><td>Il database del server si può riportare a qualsiasi momento degli ultimi 30 giorni, una protezione di Cloudflare. Ciò che viene eliminato sparisce anche da quella cronologia dopo 30 giorni. I file eliminati non vengono conservati.</td></tr>
+          <tr><td>Email e segnalazioni di bug</td><td>Finché non servono più per aiutarti o risolvere il problema, o finché non mi chiedi di eliminarle.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="delete">Eliminare i tuoi dati</h2>
+      <ul>
+        <li><strong>Sul telefono.</strong> Elimina qualsiasi stanza, foto o pin, e svuota Eliminati di recente per rimuovere subito le cose. Disinstallare l'app elimina tutto ciò che aveva salvato su quel telefono. I backup che hai esportato restano dove li hai salvati finché non li elimini da lì.</li>
+        <li><strong>Il tuo account di sincronizzazione.</strong> Nell'app, apri Account, tocca la matita accanto al tuo nome e scegli Elimina l'account di sincronizzazione. Senza l'app, usa la <a href="https://sync.unforgettablethings.app/delete-account?lang=it">pagina di eliminazione</a>. In <a href="delete-account.html">cosa viene eliminato e cosa resta</a> trovi i dettagli. Il catalogo resta sui tuoi telefoni.</li>
+        <li><strong>Una famiglia.</strong> Esci dalla famiglia ti toglie da essa. Quando esce l'ultimo membro, la famiglia e tutti i suoi file vengono eliminati.</li>
+        <li><strong>La chiave nel tuo Drive.</strong> Eliminare l'account di sincronizzazione dall'app elimina anche questa. Per toglierla tu: Google Drive sul web, Impostazioni, Gestisci app, Unforgettable Things, Opzioni, Elimina i dati nascosti dell'app. Con la sincronizzazione attiva, l'app la rimette al controllo successivo, perché è ciò che fa entrare un nuovo telefono.</li>
+      </ul>
+
+      <h2 id="feedback">Feedback, segnalazioni di bug ed email</h2>
+      <p>Invia feedback e Segnala un bug, in Account › Info e nelle schermate di errore dell'app, preparano un'email nell'app di posta del telefono. Vedi tutto ciò che contiene, e puoi cambiarlo o cancellarlo, prima di inviarla. Puoi inviarla con o senza dati di utilizzo: la versione dell'app, il modello del telefono e la versione di Android, la lingua dell'app, quante stanze, pin e cose eliminate hai e quanto spazio occupano le foto, e il registro degli errori. I dati di utilizzo non includono mai nomi, note o foto. Invia feedback può anche aprire la pagina dell'app su Google Play, dove le recensioni seguono l'informativa sulla privacy di Google.</p>
+      <p>Se scrivi a feedback@unforgettablethings.app o bugs@unforgettablethings.app, ricevo il tuo indirizzo email, il tuo nome se la tua app di posta lo include, e ciò che scrivi o alleghi. Cloudflare inoltra queste email alla mia casella. Le email a bugs@ vengono anche salvate come segnalazioni nel repository privato del codice dell'app su GitHub, così posso seguire e risolvere ogni problema. Posso vederle solo io. Uso ciò che mi invii solo per risponderti e migliorare l'app.</p>
+
+      <h2 id="others">Chi altro tratta i tuoi dati</h2>
+      <table>
+        <thead><tr><th scope="col">Chi</th><th scope="col">Per cosa</th></tr></thead>
+        <tbody>
+          <tr><td>Cloudflare, Inc.</td><td>Fa funzionare il server di sincronizzazione, conserva il suo database e i file cifrati, tiene il registro del server e inoltra le email di questo dominio. Cloudflare agisce per mio conto, in base al suo accordo sul trattamento dei dati.</td></tr>
+          <tr><td>Google</td><td>L'accesso, la copia della chiave della famiglia nel tuo Drive, i pagamenti e le verifiche degli abbonamenti di Google Play, e i messaggi che Google Play invia al server sugli abbonamenti (tramite Google Cloud). Google tratta questi dati secondo la propria <a href="https://policies.google.com/privacy?hl=it">informativa sulla privacy</a>.</td></tr>
+          <tr><td>GitHub, Inc.</td><td>Ospita questo sito e conserva le segnalazioni create dalle email a bugs@.</td></tr>
+        </tbody>
+      </table>
+      <p>Tutte e tre hanno sede negli Stati Uniti. Quando i tuoi dati escono dall'Unione europea, si basano sull'EU-US Data Privacy Framework o sulle clausole contrattuali standard della Commissione europea. Non condivido i tuoi dati con nessun altro, salvo quando lo impone la legge.</p>
+
+      <h2 id="legal-basis">Su quale base li uso</h2>
+      <table>
+        <thead><tr><th scope="col">Cosa</th><th scope="col">Base giuridica secondo il GDPR</th></tr></thead>
+        <tbody>
+          <tr><td>Sincronizzazione, famiglie e abbonamento</td><td>Necessari per fornirti il servizio a cui ti sei iscritto e che paghi (esecuzione di un contratto, art. 6, par. 1, lett. b).</td></tr>
+          <tr><td>Registro del server, sicurezza e punti di ripristino</td><td>Il mio legittimo interesse a mantenere il servizio sicuro e funzionante, e a ripristinarlo dopo un guasto (art. 6, par. 1, lett. f).</td></tr>
+          <tr><td>Email, segnalazioni di bug e dati di utilizzo che invii</td><td>Il mio legittimo interesse a risponderti e a correggere l'app (art. 6, par. 1, lett. f).</td></tr>
+          <tr><td>Riepiloghi degli ordini</td><td>Le norme fiscali e contabili (obbligo legale, art. 6, par. 1, lett. c).</td></tr>
+        </tbody>
+      </table>
+      <p>Per usare l'app non devi fornirmi nulla. La sincronizzazione richiede un account Google, perché è con quello che accedi. Nessuna decisione che ti riguarda viene presa in modo automatizzato.</p>
+
+      <h2 id="rights">I tuoi diritti</h2>
+      <p>Puoi chiedermi di:</p>
+      <ul>
+        <li>dirti quali dati ho su di te, e dartene una copia;</li>
+        <li>correggerli;</li>
+        <li>cancellarli;</li>
+        <li>smettere di usarli o limitarne l'uso, o opporti a come li uso;</li>
+        <li>darti ciò che mi hai fornito in un formato che puoi portare altrove. Per il catalogo, lo fa Esporta backup nell'app: un .zip con le tue foto e un file JSON aperto.</li>
+      </ul>
+      <p>Scrivi a <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a> e ti risponderò entro un mese. Per proteggere il tuo account, potrei chiederti di scrivermi dall'indirizzo email che usi per la sincronizzazione. Poiché catalogo e foto sono cifrati, non posso darti una loro copia leggibile dal server: la strada per arrivarci è l'app sul tuo telefono.</p>
+      <p>Puoi anche presentare reclamo all'autorità per la protezione dei dati del paese in cui vivi o lavori, o al <a href="https://www.garanteprivacy.it">Garante per la protezione dei dati personali</a>.</p>
+
+      <h2 id="children">Minori</h2>
+      <p>L'app è pensata per un pubblico generale e non si rivolge ai bambini. La sincronizzazione richiede un account Google e un abbonamento Google Play: se hai meno di 14 anni, chiedi a un genitore prima di attivarla. Se pensi che un minore abbia un account di sincronizzazione senza il consenso di un genitore, scrivimi e lo eliminerò.</p>
+
+      <h2 id="website">Questo sito</h2>
       <p>Questo sito non usa cookie, analytics né script di terze parti, e i caratteri sono serviti dal sito stesso. È ospitato su GitHub Pages. GitHub registra gli indirizzi IP dei visitatori per motivi di sicurezza; vedi <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">le note di GitHub su Pages</a> e la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a> (in inglese).</p>
+      <p>La pagina di eliminazione dell'account su sync.unforgettablethings.app mostra il pulsante di accesso di Google, che viene caricato da Google e segue l'informativa sulla privacy di Google.</p>
 
-      <h2>Sincronizzazione cloud</h2>
-      <p>La sincronizzazione cloud e la condivisione con la famiglia non sono presenti nell'app. Se verranno aggiunte, questa informativa sarà aggiornata prima del rilascio, spiegando cosa verrebbe conservato, dove e per quanto tempo.</p>
+      <h2 id="changes">Modifiche a questa informativa</h2>
+      <p>Quando questa informativa cambia, la nuova versione viene pubblicata su questa pagina con una nuova data di entrata in vigore. Se una modifica riguarda ciò che la sincronizzazione conserva o condivide, aggiornerò questa pagina prima di pubblicare la versione dell'app che la introduce.</p>
 
-      <h2>Modifiche a questa informativa</h2>
-      <p>Quando questa informativa cambia, la nuova versione viene pubblicata su questa pagina con una nuova data di entrata in vigore.</p>
-
-      <h2>Contatti</h2>
-      <p>Per domande sulla privacy, scrivi a <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
+      <h2 id="contact">Contatti</h2>
+      <p>Per domande sulla privacy, o per esercitare uno dei tuoi diritti, scrivi a <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
     </div>
   </main>
 

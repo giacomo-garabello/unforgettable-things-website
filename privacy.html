@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy policy – Unforgettable Things</title>
-  <meta name="description" content="Unforgettable Things keeps everything on your phone: no account, no server, no ads, no analytics. What the app stores, where, and how to delete it.">
+  <meta name="description" content="No ads, no analytics, no tracking. What Unforgettable Things keeps on your phone, what optional sync sends to its server (encrypted on your phone first), how long it's kept and how to delete it.">
   <meta name="theme-color" content="#FDEDE7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1E1714" media="(prefers-color-scheme: dark)">
   <link rel="alternate" hreflang="en" href="https://unforgettablethings.app/privacy.html">
@@ -33,76 +33,178 @@
 
   <main id="main" class="prose">
     <div class="wrap">
+      <!--
+        Written against build 106 of the app (tag build-106 in the app repo)
+        and its sync server (server/ in the same commit). When the app or the
+        server changes what it stores or sends, change this page and
+        it/privacy.html together, and update the effective date.
+      -->
       <h1>Privacy policy</h1>
-      <p class="meta">Unforgettable Things for Android. Effective 30 October 2026.</p>
+      <p class="meta">Unforgettable Things for Android. Effective 6 November 2026.</p>
 
       <div class="summary">
-        <p><strong>The short version.</strong> Unforgettable Things doesn't collect anything about you. There's no account, no server, no ads and no analytics.</p>
-        <p>Everything you add stays on your phone. It only leaves when you export a backup or send something yourself, and then it goes where you choose.</p>
+        <p><strong>The short version.</strong> No ads, no analytics, no tracking. Without sync, everything you add stays on your phone, and it only leaves when you export or share something yourself.</p>
+        <p><strong>Sync is optional and paid.</strong> When you turn it on, your catalogue and photos are encrypted on your phone before they leave, with a key the server never gets. So I can't read them, and neither can Cloudflare, which hosts the server. The server does know your email address, your name, who's in your household and whether you subscribe.</p>
       </div>
 
-      <h2>Who makes the app</h2>
-      <p>Unforgettable Things is made by Giacomo Garabello, an independent developer. This policy covers the Android app and this website. "I" and "me" below means the developer.</p>
+      <h2 id="who">Who's responsible</h2>
+      <p>Unforgettable Things is made by Giacomo Garabello, an independent developer based in Italy. I'm the data controller for what this policy describes, under the EU's General Data Protection Regulation (GDPR). "I" and "me" below means the developer.</p>
+      <p>This policy covers the Android app, its sync server at sync.unforgettablethings.app, and this website. You can reach me at <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
 
-      <h2>What the app stores, and where</h2>
-      <p>Everything below is kept in the app's private storage on your phone. I don't have a copy and have no way to see it.</p>
+      <h2 id="phone">What the app keeps on your phone</h2>
+      <p>Everything below is kept in the app's private storage on your phone. Without sync, I don't have a copy and have no way to see it.</p>
       <table>
         <thead><tr><th scope="col">What</th><th scope="col">Why it's kept</th></tr></thead>
         <tbody>
-          <tr><td>Rooms, photos and pins</td><td>The names you type, the photos you add, and where each pin sits on its photo. This is the app's whole purpose.</td></tr>
-          <tr><td>Expiry dates and reminders</td><td>The dates and notes you add to pins, for the Due soon list and notifications.</td></tr>
-          <tr><td>Change history</td><td>What changed and when, so Undo works and you can see a pin's history. Kept for 90 days, and not included in backups.</td></tr>
+          <tr><td>Rooms, photos and pins</td><td>The names and labels you type, the photos you add, and where each pin sits on its photo. This is the app's whole purpose.</td></tr>
+          <tr><td>Dates and reminders</td><td>The dates you add to pins, with their notes, early alerts and repeats, for the Due soon list and notifications.</td></tr>
+          <tr><td>Change history</td><td>What changed, when and by whom, so Undo works and you can see a pin's history. Kept for 90 days. It isn't included in backups and sync doesn't send it.</td></tr>
           <tr><td>Recently deleted</td><td>Things you deleted, kept for 2 days by default (you can change this in Settings) so you can bring them back.</td></tr>
-          <tr><td>Settings</td><td>Theme, language, how long to keep deleted things, the name you can enter under Account, and a random ID made on your phone. The name and ID label your changes in the history.</td></tr>
-          <tr><td>Error log</td><td>Up to 50 recent errors, so you can copy them if you report a problem.</td></tr>
+          <tr><td>Settings</td><td>Theme, language, App lock, sorting, how long to keep deleted things, your name, and random IDs made on your phone. The name and IDs label your changes in the history.</td></tr>
+          <tr><td>Error log</td><td>Up to 50 recent errors, in case you report a problem.</td></tr>
+          <tr><td>With sync on</td><td>Your Google account's email address, name and profile picture; your sign-in to the sync server and your household's key, both locked with a key that Android's Keystore holds and never lets leave the phone; and the household's latest synced files, so the app can merge them.</td></tr>
         </tbody>
       </table>
 
-      <h2>Photos</h2>
+      <h2 id="photos">Photos</h2>
       <p>You add photos with your camera or from your gallery. The app only gets the photos you pick and never browses the rest of your gallery.</p>
-      <p>Before a photo is saved, the app removes its metadata (EXIF, XMP and IPTC), which can include the GPS location, the camera model and the time it was taken. Only the orientation is kept, so the photo shows the right way up. Photos are also resized to at most 1600 pixels on the longest side to save space.</p>
+      <p>Before a photo is saved, the app removes its metadata (EXIF, XMP and IPTC), which can include the GPS location, the camera model and the time it was taken. Only the orientation is kept, so the photo shows the right way up. The same is done to every photo a backup brings in. Photos are also resized to at most 1600 pixels on the longest side to save space.</p>
 
-      <h2>Permissions</h2>
+      <h2 id="permissions">Permissions</h2>
       <ul>
-        <li><strong>Notifications.</strong> Asked the first time you add a date to a pin, so the app can notify you at 9:00 on that day. Notifications are scheduled on your phone, not sent from a server. You can turn them off in Android's settings, which the switch under Account › Settings › Notifications opens for you.</li>
+        <li><strong>Notifications.</strong> Asked the first time you add a date to a pin, so the app can notify you at 9:00 on the day and on any early alerts. Notifications are scheduled on your phone, not sent from a server. With App lock on, they don't show the pin's name or where it is. You can turn them off in Android's settings, which Account › Settings › Notifications opens for you.</li>
         <li><strong>Run at startup.</strong> Lets the app put your scheduled reminders back after the phone restarts. It does nothing else.</li>
+        <li><strong>Fingerprint or face.</strong> For the optional App lock. Android's own prompt checks your fingerprint, face, PIN, pattern or password, and tells the app only whether it worked. The app never gets your fingerprint or face data. While App lock is on, the app is also hidden from the recent apps screen.</li>
+        <li><strong>Internet.</strong> Used only by sync, by Google sign-in and by the subscription. With sync off, the app doesn't connect to any server.</li>
+        <li><strong>Google Play billing.</strong> Lets you buy the sync subscription through Google Play.</li>
         <li><strong>Camera and photos.</strong> The app doesn't ask for these. "Take a photo" opens your phone's camera app, and "Choose from gallery" uses Android's photo picker. Either way, only the photo you choose is handed to the app.</li>
       </ul>
 
-      <h2>What isn't collected</h2>
-      <p>The app has no account, no analytics, no advertising ID, no ad networks and no crash reporting. It doesn't connect to any server, and it doesn't read your location, contacts or anything else on your phone. Because nothing is collected, nothing is shared or sold.</p>
+      <h2 id="not-collected">What isn't collected</h2>
+      <p>The app has no analytics, no advertising ID, no ad networks and no automatic crash reporting. It doesn't read your location, contacts or anything else on your phone. Nothing about you is sold, used for advertising or used to build a profile of you.</p>
 
-      <h2>Backups and moving to a new phone</h2>
+      <h2 id="backups">Backups, reports and sharing</h2>
       <ul>
-        <li><strong>Export backup</strong> makes a .zip with your rooms, pins, dates and photos (and Recently deleted, if you choose). The app hands it to whatever you pick in the share sheet, such as Files, Google Drive, email or a chat app. From there, that service's privacy policy applies. The .zip isn't encrypted, so keep it somewhere you trust.</li>
-        <li><strong>Import backup</strong> replaces everything in the app with the contents of the .zip you pick.</li>
-        <li><strong>Google's cloud backup</strong> is turned off for this app, so your data isn't copied to Google's servers automatically. If you move to a new phone with Android's phone-to-phone transfer (Android 12 and later), your data can be copied directly between the two phones.</li>
+        <li><strong>Export</strong> makes a .zip backup or a PDF report, of everything or of one room, photo or close-up. The app hands it to whatever you pick in the share sheet, such as Files, Google Drive, email or a chat app. From there, that service's privacy policy applies.</li>
+        <li>A .zip backup can be <strong>protected with a password</strong> (AES-256). The password isn't stored anywhere, so a forgotten one can't be recovered. Without one, the .zip isn't encrypted. PDF reports can't have a password. Keep both somewhere you trust.</li>
+        <li><strong>Import backup</strong> adds a .zip to what's on your phone, or replaces everything with it. Either way, it stays on your phone.</li>
+        <li><strong>Share where it is</strong> sends one picture the app draws on the spot: the photos from the room down to that thing, with only the next pin marked on each. It carries no metadata and no other pin's name.</li>
+        <li><strong>Google's cloud backup</strong> is turned off for this app, so your data isn't copied to Google's servers automatically. If you move to a new phone with Android's phone-to-phone transfer (Android 12 and later), your data can be copied directly between the two phones. Sync turns itself off on the new phone until you sign in again, because the key that locks your sign-in stays on the old one.</li>
       </ul>
 
-      <h2>Error reports</h2>
-      <p>The error log stays on your phone. If you copy it from Account › About and send it to me, I'll receive the technical error messages it contains and the times they happened. I'll use them only to fix the problem, and delete them when they're no longer needed.</p>
+      <h2 id="sync">Cloud sync</h2>
+      <p>Sync is optional and paid. It's off until you turn it on in Account › Sync. It keeps the phones of a household on one catalogue, photos included, and keeps a copy safe if a phone is lost or broken.</p>
 
-      <h2>When you email me</h2>
-      <p>If you write to feedback@unforgettablethings.app or bugs@unforgettablethings.app, I receive your email address, your name if your email app includes it, and whatever you write or attach. Emails are forwarded to my inbox by Cloudflare, which handles mail for this domain.</p>
-      <p>Emails to bugs@ are also saved as private issues in the app's code repository on GitHub, so I can track and fix each problem. Only I can see them. I use what you send only to answer you and improve the app, and you can ask me to delete your emails and any issues made from them at any time.</p>
+      <h3>Signing in with Google</h3>
+      <p>Turning on sync opens Google's sign-in. Google gives the app your Google account's email address, name, profile picture and a sign-in token. The app sends the token to the sync server once; the server checks it with Google and keeps only your Google account ID and your email address. Your name becomes your name in the app, so your household can see who changed what. Your profile picture is downloaded once and stays on your phone.</p>
+      <p>Sync also asks for access to the app's own hidden folder in your Google Drive. That's where it keeps a copy of your household's key, so a new phone can open your data with nothing to type or remember. The app can't see any of your other Drive files, and you can't browse that folder either.</p>
 
-      <h2>Deleting your data</h2>
-      <p>You can delete any room, photo or pin in the app. Empty Recently deleted to remove things straight away rather than after the waiting period. Uninstalling the app removes everything it stored. Backups you exported stay wherever you saved them until you delete them there.</p>
+      <h3>What's encrypted, and who holds the key</h3>
+      <p>Your catalogue (rooms, pins, labels, dates, notes and the names attached to changes) and every photo are compressed and then encrypted on your phone with AES-256-GCM before they're uploaded. Each household has its own random 256-bit key. It stays on your household's phones and in each member's own Google Drive, and it never reaches the server. Even the photos' file names are replaced by codes, so the server can't tell when they were taken.</p>
+      <p>So Cloudflare holds the files but not the key, and Google holds the key but not the files. I can't read your catalogue or see your photos, and the server never opens, reads or logs them.</p>
 
-      <h2>Children</h2>
-      <p>The app is for a general audience. It doesn't collect personal information from anyone, children included.</p>
+      <h3>What the sync server knows</h3>
+      <p>To decide who may read and write which files, the server keeps this, without encryption:</p>
+      <table>
+        <thead><tr><th scope="col">What</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          <tr><td>Your account</td><td>Your Google account ID and email address, and when you first signed in. The email is also how I can find your account if you ask me to delete it.</td></tr>
+          <tr><td>Your name</td><td>The name from your Google account, shown to the other members of your household.</td></tr>
+          <tr><td>Your household</td><td>Who's in it, who owns it and when each person joined.</td></tr>
+          <tr><td>Your phones</td><td>A random ID for each phone, when it signed in, and the last day it connected. Each phone gets its own sign-in, and the server keeps only a scrambled copy (a hash) of it.</td></tr>
+          <tr><td>The encrypted files</td><td>Their sizes and when they were uploaded, for the household's 5 GB of storage.</td></tr>
+          <tr><td>Invites</td><td>Who made each invite, who used it and when. Only a hash of the invite code is stored.</td></tr>
+          <tr><td>Your subscription</td><td>Google Play's purchase token, the plan (monthly or yearly), its status and when it ends.</td></tr>
+        </tbody>
+      </table>
+      <p>The server's own log records only which kind of request came in, its result and its size: no IP addresses, account IDs, file names or contents. Like any server on the internet, it sees your phone's IP address while it answers a request, but it doesn't store it. Cloudflare's network may process IP addresses to deliver traffic and protect against attacks.</p>
+      <p>The server and its database run on Cloudflare. The database and the encrypted files are stored in the European Union.</p>
 
-      <h2>This website</h2>
+      <h3>Households and invites</h3>
+      <p>Everyone in a household shares one catalogue, so each member sees everything in it, and the names of the others. Only the person paying sees the subscription's details.</p>
+      <p>An invite is a link that works once, within 3 days. It carries the household's key after the # sign, a part of a link that browsers and apps never send to a server, so neither the sync server nor this website sees it. Anyone who opens the link in time can join and read the household's catalogue, so only send it to the person you mean to invite.</p>
+      <p>The owner can remove members. When someone leaves or is removed, what they shared stays with the household, and the copy of the catalogue on their own phones stays with them.</p>
+
+      <h2 id="subscription">The subscription</h2>
+      <p>Sync is bought through Google Play, monthly or yearly, and one member's subscription covers the whole household. Google takes the payment, so I never see your card or bank details.</p>
+      <p>When you buy, the app gives Google Play your sync account's random ID (not your email), so the purchase can be matched to your account. The server checks each purchase with Google Play and acknowledges it, and Google Play tells the server about renewals, cancellations and refunds as they happen. Google also gives me sales reports and an order record for each purchase, such as the order number, plan, price, date and country, which I keep as long as tax law requires. Google handles payments under its own privacy policy.</p>
+
+      <h2 id="retention">How long things are kept</h2>
+      <table>
+        <thead><tr><th scope="col">What</th><th scope="col">How long</th></tr></thead>
+        <tbody>
+          <tr><td>Everything on your phone</td><td>Until you delete it or uninstall the app. Change history: 90 days. Recently deleted: 2 days by default. Error log: the last 50 errors.</td></tr>
+          <tr><td>Your sync account and subscription records</td><td>Until you delete your sync account. Nothing deletes them automatically: if you stop using sync, they stay until you delete the account or ask me to.</td></tr>
+          <tr><td>Your sign-in on a phone</td><td>Until you sign out on that phone or delete your sync account.</td></tr>
+          <tr><td>Your name and household membership</td><td>Until you leave the household or delete your sync account.</td></tr>
+          <tr><td>Each phone's encrypted catalogue</td><td>Until its account is deleted or the household is. A phone that signs out, or whose owner leaves the household, leaves its last file there for the others to merge.</td></tr>
+          <tr><td>Encrypted photos and invite records</td><td>Until the household is deleted, which happens when its last member leaves or deletes their account. For now, a photo you delete in the app stays on the server, still encrypted, until then.</td></tr>
+          <tr><td>After a subscription ends</td><td>The household's phones can still download, but not upload, for 90 days. The files stay on the server after that, until they're deleted as above.</td></tr>
+          <tr><td>The server's log</td><td>Up to 7 days, kept by Cloudflare.</td></tr>
+          <tr><td>Restore points</td><td>The server's database can be restored to any moment in the past 30 days, a safeguard of Cloudflare's. Something deleted from it is gone from that history too after 30 days. Deleted files aren't kept.</td></tr>
+          <tr><td>Emails and bug reports</td><td>Until they're no longer needed to help you or fix the problem, or until you ask me to delete them.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="delete">Deleting your data</h2>
+      <ul>
+        <li><strong>On your phone.</strong> Delete any room, photo or pin, and empty Recently deleted to remove things straight away. Uninstalling the app removes everything it stored on that phone. Backups you exported stay wherever you saved them until you delete them there.</li>
+        <li><strong>Your sync account.</strong> In the app, open Account, tap the pencil next to your name and choose Delete sync account. Without the app, use the <a href="https://sync.unforgettablethings.app/delete-account?lang=en">deletion page</a>. <a href="delete-account.html">What's deleted and what's kept</a> has the details. Your catalogue stays on your phones.</li>
+        <li><strong>A household.</strong> Leave household removes you from it. When the last member leaves, the household and all its files are deleted.</li>
+        <li><strong>The key in your Drive.</strong> Deleting your sync account from the app deletes it too. To remove it yourself: Google Drive on the web, Settings, Manage apps, Unforgettable Things, Options, Delete hidden app data. While sync is on, the app puts it back the next time it checks, because it's what lets a new phone in.</li>
+      </ul>
+
+      <h2 id="feedback">Feedback, bug reports and email</h2>
+      <p>Send feedback and Report a bug, under Account › About and on the app's error screens, start an email in your phone's mail app. You see everything in it, and can change or delete any of it, before you send. You can send it with or without usage data: the app's version, your phone's model and Android version, the app's language, how many rooms, pins and deleted things you have and how much space the photos take, and the error log. Usage data never includes names, notes or photos. Send feedback can also open the app's Google Play page, where reviews are covered by Google's privacy policy.</p>
+      <p>When you write to feedback@unforgettablethings.app or bugs@unforgettablethings.app, I receive your email address, your name if your email app includes it, and whatever you write or attach. Cloudflare forwards these emails to my inbox. Emails to bugs@ are also saved as issues in the app's private code repository on GitHub, so I can track and fix each problem. Only I can see them. I use what you send only to answer you and improve the app.</p>
+
+      <h2 id="others">Who else handles your data</h2>
+      <table>
+        <thead><tr><th scope="col">Who</th><th scope="col">What for</th></tr></thead>
+        <tbody>
+          <tr><td>Cloudflare, Inc.</td><td>Runs the sync server, stores its database and the encrypted files, keeps the server's log, and forwards email for this domain. Cloudflare works on my behalf, under its data processing agreement.</td></tr>
+          <tr><td>Google</td><td>Sign-in, the copy of the household key in your Drive, Google Play's payments and subscription checks, and the messages Google Play sends the server about subscriptions (through Google Cloud). Google handles these under its own <a href="https://policies.google.com/privacy">privacy policy</a>.</td></tr>
+          <tr><td>GitHub, Inc.</td><td>Hosts this website, and stores the issues made from emails to bugs@.</td></tr>
+        </tbody>
+      </table>
+      <p>All three are based in the United States. Where your data leaves the European Union, they rely on the EU-US Data Privacy Framework or the European Commission's standard contractual clauses. I don't share your data with anyone else, unless the law requires it.</p>
+
+      <h2 id="legal-basis">Why I'm allowed to use it</h2>
+      <table>
+        <thead><tr><th scope="col">What</th><th scope="col">Legal basis under the GDPR</th></tr></thead>
+        <tbody>
+          <tr><td>Sync, households and the subscription</td><td>Needed to provide the service you signed up and pay for (contract, Article 6(1)(b)).</td></tr>
+          <tr><td>The server's log, security and restore points</td><td>My legitimate interest in keeping the service secure and working, and recovering it after a fault (Article 6(1)(f)).</td></tr>
+          <tr><td>Emails, bug reports and usage data you send</td><td>My legitimate interest in answering you and fixing the app (Article 6(1)(f)).</td></tr>
+          <tr><td>Order records</td><td>Tax and accounting law (legal obligation, Article 6(1)(c)).</td></tr>
+        </tbody>
+      </table>
+      <p>You don't have to give me anything to use the app. Sync needs a Google account, because that's how you sign in. No decisions about you are made automatically.</p>
+
+      <h2 id="rights">Your rights</h2>
+      <p>You can ask me to:</p>
+      <ul>
+        <li>tell you what I hold about you, and give you a copy;</li>
+        <li>correct it;</li>
+        <li>delete it;</li>
+        <li>stop or limit using it, or object to how I use it;</li>
+        <li>give you what you gave me in a format you can take elsewhere. For your catalogue, Export backup does this in the app: a .zip with your photos and an open JSON file.</li>
+      </ul>
+      <p>Email <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a> and I'll answer within one month. To protect your account, I may ask you to write from the email address you use for sync. Because your catalogue and photos are encrypted, I can't give you a readable copy of them from the server: the app on your phone is the way to them.</p>
+      <p>You can also complain to the data protection authority where you live or work, or to Italy's <a href="https://www.garanteprivacy.it">Garante per la protezione dei dati personali</a>.</p>
+
+      <h2 id="children">Children</h2>
+      <p>The app is for a general audience and isn't aimed at children. Sync needs a Google account and a Google Play subscription: if you're under 14, ask a parent before turning it on. If you think a child has a sync account without a parent's consent, email me and I'll delete it.</p>
+
+      <h2 id="website">This website</h2>
       <p>This site has no cookies, no analytics and no third-party scripts, and its fonts are served from the site itself. It's hosted on GitHub Pages. GitHub logs visitors' IP addresses for security; see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub's notes on Pages</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+      <p>The account deletion page on sync.unforgettablethings.app shows Google's sign-in button, which is loaded from Google and covered by Google's privacy policy.</p>
 
-      <h2>Cloud sync</h2>
-      <p>Cloud sync and household sharing aren't in the app. If they're added, this policy will be updated before they're released, explaining what would be stored, where, and for how long.</p>
+      <h2 id="changes">Changes to this policy</h2>
+      <p>When this policy changes, the new version is posted on this page with a new effective date. If a change affects what sync stores or shares, I'll update this page before the app version that makes the change is released.</p>
 
-      <h2>Changes to this policy</h2>
-      <p>When this policy changes, the new version is posted on this page with a new effective date.</p>
-
-      <h2>Contact</h2>
-      <p>For questions about privacy, email <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
+      <h2 id="contact">Contact</h2>
+      <p>For questions about privacy, or to use any of your rights, email <a href="mailto:feedback@unforgettablethings.app">feedback@unforgettablethings.app</a>.</p>
     </div>
   </main>
 
