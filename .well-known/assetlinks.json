@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.unforgettablethings.unforgettable_things",
+      "sha256_cert_fingerprints": [
+        "8E:E1:12:C7:80:BB:15:CF:60:AF:BB:23:EB:AC:D6:18:4F:AA:A2:3D:18:1E:AE:96:06:4D:66:60:D0:77:48:89"
+      ]
+    }
+  }
+]
