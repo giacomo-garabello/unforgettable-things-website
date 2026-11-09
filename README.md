@@ -26,7 +26,7 @@ Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no cookie
 
 ## Common edits
 
-- **App goes live on Google Play.** In `index.html`, find the comment above `<span class="store">` and swap the `<span>` for the `<a>` it shows, changing "Coming soon to" to "Get it on".
+- **App goes public on Google Play.** In `index.html` and `it/index.html`, find the comment above `<a class="store">`, point the link at the Play listing it shows, and change the "Join the test" text as it says.
 - **Privacy policy changes.** Edit `privacy.html` and `it/privacy.html` together and update the effective date at the top of both. The policy describes the app and sync server as of build 106 (a comment at the top says so): when a new build changes what the app stores or sends, or what the server keeps, change the policy before that build is released.
 - **Demo pins.** In `assets/js/demo.js`, each pin has `x` and `y` as fractions of the photo (0 to 1), like the app. `open` makes it a close-up; `align: "end"` or `"start"` moves its label when it's near an edge.
 
@@ -41,4 +41,5 @@ Then open http://localhost:8000.
 ## Contact
 
 `feedback@unforgettablethings.app` is forwarded by Cloudflare Email Routing. It's the contact address in the footer and the privacy policy.
+`enroll@unforgettablethings.app` is where the "Join the test" button on the landing page sends people who want to test the app.
 `bugs@unforgettablethings.app` goes to a Cloudflare Email Worker that forwards a copy to the same inbox and opens a private issue (label `from-email`) in the app repo.
